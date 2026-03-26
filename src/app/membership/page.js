@@ -3,33 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function MembershipPage() {
   return (
     <main className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#FF6B35] selection:text-white">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
-        <div className="w-full px-[2px] h-20 flex items-center justify-between font-black uppercase tracking-tighter">
-          <Link href="/" className="text-2xl">
-            FITFAM <span className="text-[#FF6B35]">FITNESS</span>
-          </Link>
-
-          <div className="hidden md:flex items-center space-x-8 text-[11px] font-black uppercase tracking-[0.2em] text-[#A1A1AA]">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
-            <Link href="/membership" className="text-[#FF6B35]">Membership</Link>
-            <Link href="/book-trail" className="hover:text-white transition-colors">Book Trial</Link>
-            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-          </div>
-
-          <Link
-            href="/membership"
-            className="bg-[#FF6B35] text-white px-8 py-2.5 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
-          >
-            Join Now
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center pt-20 overflow-hidden text-left">

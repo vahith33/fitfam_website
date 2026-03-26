@@ -3,33 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#FF6B35] selection:text-white">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
-        <div className="w-full px-[2px] h-20 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-black uppercase tracking-tighter">
-            FITFAM <span className="text-[#FF6B35]">FITNESS</span>
-          </Link>
-
-          <div className="hidden md:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest text-[#A1A1AA]">
-            <Link href="/home" className="text-[#FF6B35]">Home</Link>
-            <Link href="/about" className="hover:text-[#FF6B35] transition-colors">About</Link>
-            <Link href="/membership" className="hover:text-[#FF6B35] transition-colors">Membership</Link>
-            <Link href="/book-trail" className="hover:text-[#FF6B35] transition-colors">Book Trial</Link>
-            <Link href="/contact" className="hover:text-[#FF6B35] transition-colors">Contact</Link>
-          </div>
-
-          <Link
-            href="/membership"
-            className="bg-white text-black px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#FF6B35] hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95"
-          >
-            Join Now
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
